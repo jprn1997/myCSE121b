@@ -77,6 +77,7 @@ const output = (movies) => {
       let img = document.createElement("img");
       img.setAttribute("src", movie.imageUrl);
       img.setAttribute("alt", movie.movieName);
+      img.setAttribute('width', 200);
   
       article.appendChild(movieName);
       article.appendChild(order);
