@@ -11,15 +11,15 @@ dayOfWeek = today.getDay();
 let message1;
 
 // Step 5: Using an if statement, if the day of the week is a weekday (i.e. Monday - Friday), set the message variable to the string 'Hang in there!'
-if (dayOfWeek >= 1 && dayOfWeek <= 5) {
-  message1 = "Hang in there!";
-}
+// if (dayOfWeek == 1) {
+//   message1 = "Its end game!";
+// }
 
 // Step 6: Using an else statement, set the message variable to 'Woohoo!  It is the weekend!'
-if (dayOfWeek >= 1 && dayOfWeek <= 5) {
-  message1 = "Hang in there!";
+if (dayOfWeek == 2) {
+  message1 = "It's end game bro! Get the assingment IN!";
 } else {
-  message1 = "Woohoo!  It is the weekend!";
+  message1 = "Who cares!";
 }
 // Step 1: Declare a new variable to hold another message
 let message2;
@@ -62,38 +62,93 @@ document.querySelector("#message2").textContent = message2;
 //
 //
 const output = (movies) => {
-    movies.forEach((movie) => {
-      let article = document.createElement("article");
+  movies.forEach((movie) => {
+    let article = document.createElement("article");
+    let movieName = document.createElement("h3");
+    movieName.textContent = movie.movieName;
   
-      let movieName = document.createElement("h3");
-      movieName.textContent = movie.movieName;
+    let order = document.createElement("h4");
+    order.textContent = movie.order;
   
-      let order = document.createElement("h4");
-      order.textContent = movie.order;
+    let released = document.createElement("h4");
+    released.textContent = movie.released;
   
-      let released = document.createElement("h4");
-      released.textContent = movie.released;
+    let img = document.createElement("img");
+    img.setAttribute("src", movie.imageUrl);
+    img.setAttribute("alt", movie.movieName);
+    img.setAttribute('width', 200);
   
-      let img = document.createElement("img");
-      img.setAttribute("src", movie.imageUrl);
-      img.setAttribute("alt", movie.movieName);
-      img.setAttribute('width', 200);
+    article.appendChild(movieName);
+    article.appendChild(order);
+    article.appendChild(released);
+    article.appendChild(img);
   
-      article.appendChild(movieName);
-      article.appendChild(order);
-      article.appendChild(released);
-      article.appendChild(img);
+    document.querySelector("#movies").appendChild(article);
+  });
+};
+//   
+// 
+//   
+const getMovies = async () => {
+  const response = await fetch(
+    "https://raw.githubusercontent.com/jprn1997/myCSE121b/main/final/starwas_json.json"
+  );
+  movieList = await response.json();
+  output(movieList);
+};
+getMovies();
+// 
+// 
+// 
+// 
+// 
+// 
+// 
+const reset = () => {
+  document.querySelector("#movies").innerHTML = "";
+};
   
-      document.querySelector("#movies").appendChild(article);
-    });
-  };
-  
+const sortBy = () => {
+  reset();
 
-  const getMovies = async () => {
-    const response = await fetch(
-      "https://raw.githubusercontent.com/jprn1997/myCSE121b/main/final/starwas_json.json"
-    );
-    movieList = await response.json();
-    output(movieList);
-  };
-  getMovies();
+  let filter = document.querySelector("#sortBy").value;
+
+  switch (filter) {
+    case "movieNameAscending":
+      output(
+        movieList.sort((movie1, movie2) => {
+          let movieName1 = movie1.movieName.toLowerCase();
+          let movieName2 = movie2.movieName.toLowerCase();
+          if (movieName1 < movieName2) return -1;
+          else if (movieName1 > movieName2) return 1;
+          else return 0;
+        })
+      );
+      break;
+    case "movieNameDescending":
+      output(
+        movieList.sort((movie1, movie2) => {
+          let movieName1 = movie1.movieName.toLowerCase();
+          let movieName2 = movie2.movieName.toLowerCase();
+          if (movieName1 > movieName2) return -1;
+          else if (movieName1 < movieName2) return 1;
+          else return 0;
+        })
+      );
+      break;
+    default:
+      // using ternary operators
+      output(
+        movieList.sort((movie1, movie2) =>
+          movie1.movieName.toLowerCase() > movie2.movieName.toLowerCase()
+            ? 1
+            : movie2.movieName.toLowerCase() >
+              movie1.movieName.toLowerCase()
+            ? -1
+            : 0
+        )
+      );
+      break;
+  }
+}
+document.querySelector("#sortBy").addEventListener("change", sortBy);

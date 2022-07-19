@@ -5,6 +5,7 @@ article {
 
 body {
     font-family: 'Kalam', cursive;
+    background-color: #e7d2cc;
 }
 
 div {
@@ -100,7 +101,7 @@ section {
     vertical-align: top;
 }
 
-#temples {
+#movies {
     display: grid;
     grid-template-columns: 1fr;
 }
@@ -120,13 +121,13 @@ section {
         margin: 0 10px;
     }
 
-    #temples {
+    #movies {
         grid-template-columns: 1fr 1fr;
     }
 }
 
 @media only screen and (min-width: 64em) {
-    #temples {
+    #movies {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
