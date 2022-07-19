@@ -62,7 +62,7 @@ document.querySelector("#message2").textContent = message2;
 //
 //
 const output = (movies) => {
-    movies.forEach((mvoie) => {
+    movies.forEach((movie) => {
       let article = document.createElement("article");
   
       let movieName = document.createElement("h3");
@@ -83,16 +83,16 @@ const output = (movies) => {
       article.appendChild(released);
       article.appendChild(img);
   
-      document.querySelector("#temples").appendChild(article);
+      document.querySelector("#movies").appendChild(article);
     });
   };
   
 
   const getMovies = async () => {
     const response = await fetch(
-      "starwas_json.json"
+      "https://raw.githubusercontent.com/jprn1997/myCSE121b/main/final/starwas_json.json"
     );
     movieList = await response.json();
     output(movieList);
   };
-  getTemples();
+  getMovies();
