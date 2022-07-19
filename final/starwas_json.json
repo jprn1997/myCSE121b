@@ -1,0 +1,74 @@
+[
+    {
+        "movieName": "Star Wars: Episode I - The Phantom Menace",
+        "movieOrder": "1",
+        "Released": "1999",
+        "imageUrl": "https://www.imdb.com/title/tt0120915/mediaviewer/rm2234464000/?ref_=tt_ov_i"
+    },
+    {
+        "movieName": "Star Wars: Episode II - Attack of the Clones",
+        "movieOrder": "2",
+        "Released": "2002",
+        "imageUrl": "https://www.imdb.com/title/tt0121765/mediaviewer/rm423895808/?ref_=tt_ov_i"
+    },
+    {
+        "movieName": "Star Wars: The Clone Wars- serries",
+        "movieOrder": "3",
+        "Released": "2008",
+        "imageUrl": "https://www.imdb.com/title/tt1185834/mediaviewer/rm1440289025/?ref_=tt_ov_i"
+    },
+    {
+        "movieName": "Solo: A Star Wars Story",
+        "movieOrder": "4",
+        "Released": "2018",
+        "imageUrl": "https://www.imdb.com/title/tt3778644/mediaviewer/rm84166912/?ref_=tt_ov_i"
+    },
+    {
+        "movieName": "Star Wars: Episode III - Revenge of the Sith",
+        "movieOrder": "5",
+        "Released": "2005",
+        "imageUrl": "https://www.imdb.com/title/tt0121766/mediaviewer/rm4094016256/?ref_=tt_ov_i"
+    },
+    {
+        "movieName": "Rogue One: A Star Wars Story",
+        "movieOrder": "6",
+        "Released": "2016",
+        "imageUrl": "https://www.imdb.com/title/tt3748528/mediaviewer/rm465044224/?ref_=tt_ov_i"
+    },
+    {
+        "movieName": "Star Wars Episode IV: A New Hope",
+        "movieOrder": "7",
+        "Released": "1977",
+        "imageUrl": "https://www.imdb.com/title/tt0076759/mediaviewer/rm2482838785/?ref_=tt_ov_i"
+    },
+    {
+        "movieName": "Star Wars: Episode V - The Empire Strikes Back",
+        "movieOrder": "8",
+        "Released": "1980",
+        "imageUrl": "https://www.imdb.com/title/tt0080684/mediaviewer/rm3114097664/?ref_=tt_ov_i"
+    },
+    {
+        "movieName": "Star Wars: Episode VI - Return of the Jedi",
+        "movieOrder": "9",
+        "Released": "1983",
+        "imageUrl": "https://www.imdb.com/title/tt0086190/mediaviewer/rm602420224/?ref_=tt_ov_i"
+    },
+    {
+        "movieName": "Star Wars: Episode VII - The Force Awakens",
+        "movieOrder": "10",
+        "Released": "2015",
+        "imageUrl": "https://www.imdb.com/title/tt2488496/mediaviewer/rm527556608/?ref_=tt_ov_i"
+    },
+    {
+        "movieName": "Star Wars: Episode VIII - The Last Jedi",
+        "movieOrder": "11",
+        "Released": "2017",
+        "imageUrl": "https://www.imdb.com/title/tt2527336/mediaviewer/rm574104832/?ref_=tt_ov_i"
+    },
+    {
+        "movieName": "Star Wars: Episode IX - The Rise of Skywalker",
+        "movieOrder": "12",
+        "Released": "2019",
+        "imageUrl": "https://www.imdb.com/title/tt2527338/mediaviewer/rm1361479681/?ref_=tt_ov_i"
+    }
+]
