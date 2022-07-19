@@ -1,30 +1,22 @@
-// Step 1: Declare and initialize a new variable to hold the current date
+// James P Norma
+// Cse 121B
+// 
 const today = new Date();
-
-// Step 2: Declare another variable to hold the day of the week
+// 
+// 
 let dayOfWeek;
-
-// Step 3: Using the variable declared in Step 1, assign the value of the variable declared in Step 2 to the day of the week ( hint: getDay() )
+// 
 dayOfWeek = today.getDay();
-
-// Step 4: Declare a variable to hold a message that will be displayed
 let message1;
-
-// Step 5: Using an if statement, if the day of the week is a weekday (i.e. Monday - Friday), set the message variable to the string 'Hang in there!'
-// if (dayOfWeek == 1) {
-//   message1 = "Its end game!";
-// }
-
-// Step 6: Using an else statement, set the message variable to 'Woohoo!  It is the weekend!'
+// 
 if (dayOfWeek == 2) {
   message1 = "It's end game bro! Get the assingment IN!";
 } else {
   message1 = "Who cares!";
 }
-// Step 1: Declare a new variable to hold another message
+// 
 let message2;
 
-// Step 2: Use switch, case and break to set the message variable to the day of the week as a string (e.g. Sunday, Monday, etc.) using the day of week variable declared in Step 2 above
 switch (dayOfWeek) {
   case 0:
     message2 = "Sunday";
@@ -51,16 +43,12 @@ switch (dayOfWeek) {
     message2 = "Unknown - " + dayOfWeek;
     break;
 }
-// Step 1: Assign the value of the first message variable to the HTML element with an ID of message1
 document.querySelector("#message1").textContent = message1;
 
-// Step 2: Assign the value of the second message variable to the HTML element with an ID of message2
 document.querySelector("#message2").textContent = message2;
-//
-//
-//
-//
-//
+// 
+// 
+// 
 const output = (movies) => {
   movies.forEach((movie) => {
     let article = document.createElement("article");
@@ -137,7 +125,7 @@ const sortBy = () => {
       );
       break;
     default:
-      // using ternary operators
+      
       output(
         movieList.sort((movie1, movie2) =>
           movie1.movieName.toLowerCase() > movie2.movieName.toLowerCase()
